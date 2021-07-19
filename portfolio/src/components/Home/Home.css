@@ -1,0 +1,97 @@
+       body {
+           overflow-x: hidden;
+           background-color: rgb(43, 43, 44);
+           color: white;
+           scroll-behavior: smooth;
+       }
+       
+       h1 {
+           font-weight: 400;
+           font-size: 100px;
+           transform: skew(12deg)rotate(-12deg);
+           grid-area: text;
+           font-family: 'Sarpanch', sans-serif;
+           font-size: 20vmin;
+           margin: 0;
+           padding: 30px;
+           color: #1d9099;
+           text-shadow: 1vmin 1vmin 0 #E79C10, -1vmin -1vmin 0 #D53A33;
+       }
+       
+       ul {
+           list-style: none;
+           position: relative;
+           left: 600px;
+           top: -100px;
+           font-family: 'Source Code Pro', monospace;
+       }
+       
+       li {
+           padding-top: 10px;
+       }
+       
+       .circle {
+           color: #fff;
+           background-color: #D53A33;
+           height: 130px;
+           width: 130px;
+           border-radius: 50%;
+           text-align: center;
+           align-items: right;
+           position: relative;
+           left: 1250px;
+           top: 150px;
+       }
+       
+       p {
+           transform: scale(1) rotate(15deg);
+           position: relative;
+           top: 40px;
+           font-family: 'Roboto Mono', monospace;
+       }
+       
+       h5 {
+           transform: rotate(270deg);
+           position: relative;
+           right: 750px;
+           top: 200px;
+           font-family: 'Source Code Pro', monospace;
+       }
+       
+       .container>h1 {
+           animation: rise 1s ease-in-out infinite forwards;
+       }
+       
+       @media screen and (max-width: 550px) {
+           .container>h1 {
+               font-size: 70px;
+           }
+       }
+       
+       .container>h1:after {
+           animation: drop 1s ease-in-out infinite forwards;
+       }
+       
+       @keyframes drop {
+           0% {
+               filter: drop-shadow(-5px -5px 0 var(--shadow-color));
+           }
+           50% {
+               filter: drop-shadow(5px 5px 0 var(--shadow-color));
+           }
+           100% {
+               filter: drop-shadow(-5px -5px 0 var(--shadow-color));
+           }
+       }
+       
+       @keyframes rise {
+           0% {
+               transform: translate(5px, 5px);
+           }
+           50% {
+               transform: translate(-5px, -5px);
+           }
+           100% {
+               transform: translate(5px, 5px);
+           }
+       }
