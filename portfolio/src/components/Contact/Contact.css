@@ -1,0 +1,46 @@
+body {
+    overflow: hidden;
+}
+
+.contact {
+    position: absolute;
+    width: 2003.5px;
+    height: 1501px;
+    left: -111px;
+    top: -331px;
+    background: rgb(195, 195, 195);
+}
+
+.man {
+    position: relative;
+    width: 400px;
+    height: 403px;
+    left: 1302px;
+    top: 422px;
+}
+
+a {
+    all: unset;
+}
+
+h6 {
+    font-family: Arya;
+    font-size: 30px;
+    left: 200px;
+    top: 400px;
+    line-height: 219px;
+    color: #333333;
+    text-align: left;
+}
+
+i {
+    color: black;
+}
+
+h1 {
+    font-size: 80px;
+    left: 182px;
+    top: 500px;
+    text-align: justify;
+    cursor: pointer;
+}

@@ -1,0 +1,30 @@
+body {
+    overflow: hidden;
+}
+
+.about {
+    position: absolute;
+    width: 2003.5px;
+    height: 1501px;
+    left: -111px;
+    top: -331px;
+    background: rgb(195, 195, 195);
+}
+
+.artemis {
+    position: relative;
+    width: 400px;
+    height: 403px;
+    left: 182px;
+    top: 422px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family: "Black Mango";
+    src: url("BlackMangoVariableGX.ttf")/* TTF file for CSS3 browsers */
+}
