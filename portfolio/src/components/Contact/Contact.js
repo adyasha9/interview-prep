@@ -25,7 +25,8 @@ export default class Contact extends Component {
 
                <ul className="list">
                <li className="list-item"><Link to="/about">ABOUT</Link></li>
-               <li className="list-item"><Link to="/contact">CONTACT</Link></li>
+               <li className="list-item"><Link to="/experience">EXPERIENCE</Link></li>
+               <li className="list-item"><Link to="/contact" style={{color: 'white'}}>CONTACT</Link></li>
                <li className="list-item"><Link to="/work">WORK</Link></li>
                <li className="list-item"><a href={Resume}  download>RESUME</a></li>
            </ul>

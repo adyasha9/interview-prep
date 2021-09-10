@@ -1,0 +1,116 @@
+body {
+    overflow: hidden;
+}
+
+.experience {
+    position: absolute;
+    width: 2003.5px;
+    height: 1501px;
+    left: -111px;
+    top: -331px;
+    background: rgba(195, 195, 195, 1);
+}
+
+.experience-container {
+    position: absolute;
+    top: 250px;
+    width: 80%;
+    left: -111px;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #6e6d6d;
+    z-index: 1
+}
+
+.timeline-block {
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
+}
+
+.timeline-block-right {
+    float: right;
+}
+
+.timeline-block-left {
+    float: left;
+    direction: rtl
+}
+
+.marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(151, 104, 175);
+    margin-top: 10px;
+    z-index: 9999
+}
+
+.timeline-content {
+    width: 95%;
+    padding: 0 15px;
+    color: rgb(2, 2, 2)
+}
+
+.timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Black Mango';
+}
+
+.timeline-content span {
+    font-family: 'Arya';
+    font-size: 15px;
+    color: #fafafa;
+}
+
+.timeline-content p {
+    font-family: 'Black Mango';
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .container:before {
+        left: 8px;
+        width: 2px;
+    }
+    .timeline-block {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .timeline-block-right {
+        float: none;
+    }
+    .timeline-block-left {
+        float: none;
+        direction: ltr;
+    }
+}
+
+ul {
+    list-style: none;
+}

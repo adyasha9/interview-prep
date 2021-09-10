@@ -60,6 +60,43 @@ body {
     cursor: pointer;
 }
 
+Link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+Link:before,
+Link:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    background: #fff;
+}
+
+Link:before {
+    left: 0;
+}
+
+Link:after {
+    right: 0;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+Link:hover:before {
+    background: #fff;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+Link:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+}
+
 * {
     box-sizing: border-box;
 }

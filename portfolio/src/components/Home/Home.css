@@ -8,8 +8,9 @@
        height: 1501px;
        left: -111px;
        top: -331px;
-       background: linear-gradient(rgb(33, 14, 47, 1), rgb(195, 195, 195, 1));
+       /* background: linear-gradient(rgb(33, 14, 47, 1), rgb(195, 195, 195, 1)); */
        background-size: cover;
+       background: rgb(195, 195, 195, 1);
    }
    
    table {
@@ -72,7 +73,7 @@
        line-height: 104%;
        /* identical to box height, or 60px */
        text-align: left;
-       color: #000000;
+       color: rgb(151, 104, 175);
        z-index: 2;
    }
    
