@@ -2,8 +2,33 @@ import React, { Component } from 'react'
 import './Work.css'
 import {Link} from 'react-router-dom';
 import Resume from "../../Resume.docx"
+import { TimelineMax, Power1, Back } from "gsap/all";
 
 export default class Work extends Component {
+  constructor(props) {
+    super(props);
+    this.timeline = new TimelineMax({ paused: true });
+
+  }
+  componentDidMount() {
+    this.timeline
+      .from(this.content, 0.4, {
+        autoAlpha: 0,
+        y: 25,
+        ease: Power1.easeInOut
+      })
+
+    this.timeline.play();
+  }
+
+  changePage = (e, destination) => {
+    e.preventDefault();
+    this.timeline.reverse();
+    const timelineDuration = this.timeline.duration() * 1000;
+    setTimeout(() => {
+      this.props.history.push(destination);
+    }, timelineDuration);
+  };
       
     render() {    
        
@@ -11,7 +36,7 @@ export default class Work extends Component {
             <div className="container work">           
           <Link to="/"> <img src={require('../../Vector.png').default} alt="logo" className="logo" /></Link>
            <button><img src={require('../../coolicon.png').default} alt="mode" className="coolicon"/></button>
-        <div class="cardcontainer">
+        <div class="cardcontainer" ref={div => (this.content = div)}>
   <div class="card">
     <h3 class="title">Telegram Clone</h3>
     <div class="bar">

@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    scroll-behavior: smooth;
 }
 
 .work {
@@ -8,12 +9,7 @@ body {
     height: 1501px;
     left: -111px;
     top: -331px;
-    background: rgb(195, 195, 195);
-}
-
-.dark-mode {
-    background-color: black;
-    color: white;
+    background: rgb(195, 195, 195, 1);
 }
 
 .logo {
@@ -60,51 +56,28 @@ body {
     cursor: pointer;
 }
 
-Link:hover {
+li:hover {
     color: #fff;
     text-decoration: none;
 }
 
-Link:before,
-Link:after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -2px;
-    background: #fff;
+.theme-light {
+    --dark-text: #5E4B56;
+    --accent: #dbe7e4;
+    --button-border: #5E4B56;
+    --dark-background: #DBE7E4;
+    --light-text: #5E4B56;
+    --light-background: #EDDCD2;
 }
 
-Link:before {
-    left: 0;
-}
 
-Link:after {
-    right: 0;
-    background: #fff;
-    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
+/* --light-text is fine on on the first 3, --dark-text is fine on all of them, --dark-text and dark-background are fine as text on --accent */
 
-Link:hover:before {
-    background: #fff;
-    width: 100%;
-    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-Link:hover:after {
-    background: transparent;
-    width: 100%;
-    transition: 0s;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
+.theme-dark {
+    --dark-text: #292929;
+    --dark-background: #2F4550;
+    --light-background: #586F7C;
+    --accent: #b8dbd9;
+    --button-border: #b8dbd9;
+    --light-text: #F9F8F8;
 }
