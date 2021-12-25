@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.b9c5f8ef.chunk.css",
+    "main.js": "/react-gh-pages/static/js/main.4a42d018.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.4a42d018.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.2b898c53.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.2b898c53.js.map",
+    "static/js/2.0304a265.chunk.js": "/react-gh-pages/static/js/2.0304a265.chunk.js",
+    "static/js/2.0304a265.chunk.js.map": "/react-gh-pages/static/js/2.0304a265.chunk.js.map",
+    "static/js/3.c9887cc7.chunk.js": "/react-gh-pages/static/js/3.c9887cc7.chunk.js",
+    "static/js/3.c9887cc7.chunk.js.map": "/react-gh-pages/static/js/3.c9887cc7.chunk.js.map",
+    "index.html": "/react-gh-pages/index.html",
+    "static/css/main.b9c5f8ef.chunk.css.map": "/react-gh-pages/static/css/main.b9c5f8ef.chunk.css.map",
+    "static/js/2.0304a265.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.0304a265.chunk.js.LICENSE.txt",
+    "static/media/Home.css": "/react-gh-pages/static/media/BlackMangoVariableGX.ff5bd564.ttf",
+    "static/media/Resume.682e2985.docx": "/react-gh-pages/static/media/Resume.682e2985.docx",
+    "static/media/artemis.png": "/react-gh-pages/static/media/artemis.51d35582.png",
+    "static/media/man.png": "/react-gh-pages/static/media/man.e064e0e0.png",
+    "static/media/women.png": "/react-gh-pages/static/media/women.bc03c3d1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b898c53.js",
+    "static/js/2.0304a265.chunk.js",
+    "static/css/main.b9c5f8ef.chunk.css",
+    "static/js/main.4a42d018.chunk.js"
+  ]
+}
