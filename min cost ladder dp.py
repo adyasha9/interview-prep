@@ -1,0 +1,38 @@
+# Min Cost Climbing Stairs
+# Solved 
+# You are given an array of integers cost where cost[i] is the cost of taking
+#  a step from the ith floor of a staircase. After paying the cost, you can step 
+# to either the (i + 1)th floor or the (i + 2)th floor.
+
+# You may choose to start at the index 0 or the index 1 floor.
+
+# Return the minimum cost to reach the top of the staircase, i.e. just past the last index in cost.
+
+# Example 1:
+
+# Input: cost = [1,2,3]
+
+# Output: 2
+# Explanation: We can start at index = 1 and pay the cost of cost[1] = 2 
+# and take two steps to reach the top. The total cost is 2.
+
+# Example 2:
+
+# Input: cost = [1,2,1,2,1,1,1]
+
+# Output: 4
+
+from typing import List
+
+class Solution:
+    def minCostClimbingStairs(self, cost: List[int]) -> int:
+        n = len(cost)
+        memo = [-1]*(n)
+        def dfs(i):
+            if i>=n:
+                return 0
+            if memo[i] != -1:
+                return memo[i]
+            memo[i] = cost[i] + min(dfs(i+1),dfs(i+2))
+            return memo[i]
+        return min(dfs(0),dfs(1))
