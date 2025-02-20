@@ -1,0 +1,138 @@
+Here's a breakdown of the time and space complexity of all the essential data structures covered 
+in **NeetCode 150**, grouped by category.  
+
+---
+
+## **1. Arrays (Dynamic & Static)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Access    | **O(1)**        | **O(n)** (for dynamic arrays) |
+| Search    | **O(n)**        | - |
+|Insert(end)| **O(1)** (amortized) | - |
+| Insert at middle | **O(n)** | - |
+| Delete from end | **O(1)** | - |
+| Delete from middle | **O(n)** | - |
+
+🔹 **Why?**  
+- Insertions/deletions in the middle require shifting elements, hence **O(n)**.
+- Access is **O(1)** because arrays have contiguous memory.
+
+---
+
+## **2. HashMap (Hash Table)**
+| Operation | Average Case | Worst Case | Space Complexity |
+|-----------|-------------|------------|------------------|
+| Access    | **N/A**      | **N/A**    | **O(n)** |
+| Search    | **O(1)**     | **O(n)**   | - |
+| Insert    | **O(1)**     | **O(n)**   | - |
+| Delete    | **O(1)**     | **O(n)**   | - |
+
+🔹 **Why?**  
+- In an average case, a good hash function ensures **O(1)** lookups.  
+- In the worst case (bad hashing → collisions), it degenerates to **O(n)**.  
+- **Space complexity is O(n)** due to storing key-value pairs.
+
+---
+
+## **3. Linked List (Singly/Doubly)**
+| Operation | Singly LL | Doubly LL | Space Complexity |
+|-----------|----------|-----------|------------------|
+| Access    | **O(n)** | **O(n)** | **O(n)** |
+| Search    | **O(n)** | **O(n)** | - |
+| Insert at Head | **O(1)** | **O(1)** | - |
+| Insert at Tail | **O(n)** | **O(1)** | - |
+| Delete at Head | **O(1)** | **O(1)** | - |
+| Delete at Tail | **O(n)** | **O(1)** | - |
+
+🔹 **Why?**  
+- **O(n) access** because you must traverse from the head.  
+- **Doubly linked lists** allow for **O(1) tail insertions** since they maintain a tail pointer.  
+
+---
+
+## **4. Stack (LIFO)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Push      | **O(1)**        | **O(n)** |
+| Pop       | **O(1)**        | - |
+| Peek      | **O(1)**        | - |
+
+🔹 **Why?**  
+- Stacks allow **O(1) operations** using an array (dynamic) or a linked list.  
+
+---
+
+## **5. Queue (FIFO)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Enqueue   | **O(1)**        | **O(n)** |
+| Dequeue   | **O(1)**        | - |
+| Peek      | **O(1)**        | - |
+
+🔹 **Why?**  
+- **O(1) operations** when using a circular queue or a linked list.  
+
+### **6. Deque (Double-Ended Queue)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Enqueue Front | **O(1)** | **O(n)** |
+| Enqueue Back  | **O(1)** | - |
+| Dequeue Front | **O(1)** | - |
+| Dequeue Back  | **O(1)** | - |
+
+---
+
+## **7. Heap (Priority Queue - MinHeap / MaxHeap)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Insert    | **O(log n)**    | **O(n)** |
+| Extract Min/Max | **O(log n)** | - |
+| Peek      | **O(1)**        | - |
+| Search    | **O(n)**        | - |
+
+🔹 **Why?**  
+- Heap operations involve **logarithmic time** due to reordering via heapify.  
+- **Peek is O(1)** as the min/max element is at the root.  
+
+---
+
+## **8. Binary Search Tree (BST)**
+| Operation | Average Case | Worst Case | Space Complexity |
+|-----------|-------------|------------|------------------|
+| Search    | **O(log n)** | **O(n)** | **O(n)** |
+| Insert    | **O(log n)** | **O(n)** | - |
+| Delete    | **O(log n)** | **O(n)** | - |
+
+🔹 **Why?**  
+- A **balanced BST (e.g., AVL, Red-Black Tree)** has **O(log n)** operations.  
+- A **skewed BST** (all nodes leaning one way) degrades to **O(n)**.  
+
+---
+
+## **9. Trie (Prefix Tree)**
+| Operation | Time Complexity | Space Complexity |
+|-----------|----------------|------------------|
+| Insert    | **O(m)**        | **O(m * n)** |
+| Search    | **O(m)**        | - |
+| Delete    | **O(m)**        | - |
+
+🔹 **Why?**  
+- **O(m) operations**, where **m** is the length of the word.  
+- Space complexity **O(m * n)** for storing multiple words.  
+
+---
+
+## **10. Graph (Adjacency List vs. Adjacency Matrix)**
+| Operation | Adjacency List | Adjacency Matrix |
+|-----------|---------------|------------------|
+| Space    | **O(V + E)**  | **O(V²)** |
+| Add Edge | **O(1)**      | **O(1)** |
+| Remove Edge | **O(E)**  | **O(1)** |
+| Search (DFS/BFS) | **O(V + E)** | **O(V²)** |
+
+🔹 **Why?**  
+- Adjacency **lists are better for sparse graphs**, while **matrices are better for dense graphs**.  
+- DFS/BFS complexity depends on the number of vertices and edges.  
+
+---
+

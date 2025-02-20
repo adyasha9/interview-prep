@@ -1,0 +1,175 @@
+
+
+# **📌 INTERVIEW PREPARATION NOTES (Extensive)**  
+
+## **📍 1. Dynamic Programming (DP)**
+### **What is DP?**  
+- DP is used when a problem **has overlapping subproblems** and **optimal substructure**.  
+- **Overlapping Subproblems**: Same subproblems are solved multiple times.  
+- **Optimal Substructure**: The solution of a problem can be built using the solutions of its subproblems.  
+
+### **Types of DP Approaches**
+1. **Top-Down (Memoization)**: Recursive + Cache the results.  
+2. **Bottom-Up (Tabulation)**: Solve subproblems first and build the final solution iteratively.  
+
+### **Common DP Problems**
+| Problem | Approach | Complexity |
+|---------|----------|------------|
+| Fibonacci | `dp[n] = dp[n-1] + dp[n-2]` | O(N) |
+| 0/1 Knapsack | `dp[i][w] = max(dp[i-1][w], value[i] + dp[i-1][w - weight[i]])` | O(N * W) |
+| Longest Common Subsequence (LCS) | `dp[i][j] = max(dp[i-1][j], dp[i][j-1])` | O(N * M) |
+| Coin Change | `dp[i] = min(dp[i - coin] + 1)` | O(N * M) |
+
+### **Example: Fibonacci using DP**
+```python
+# Top-Down (Memoization)
+def fib(n, dp={}):
+    if n <= 1:
+        return n
+    if n in dp:
+        return dp[n]
+    dp[n] = fib(n-1, dp) + fib(n-2, dp)
+    return dp[n]
+
+# Bottom-Up (Tabulation)
+def fib(n):
+    dp = [0] * (n+1)
+    dp[1] = 1
+    for i in range(2, n+1):
+        dp[i] = dp[i-1] + dp[i-2]
+    return dp[n]
+```
+
+---
+
+## **📍 2. Recursion & Backtracking**
+### **What is Recursion?**
+- A function that **calls itself** to solve smaller instances of a problem.
+- Needs a **base case** to avoid infinite recursion.
+
+### **What is Backtracking?**
+- A special kind of recursion where we **try all possible choices** and backtrack if needed.
+- Used in **N-Queens, Sudoku, Word Search**.
+
+### **Example: N-Queens (Backtracking)**
+
+## **📍 3. Graph Algorithms**
+### **Graph Representations**
+1. **Adjacency List** → Efficient for sparse graphs.  
+   ```python
+   graph = {0: [1,2], 1: [2,3], 2: [3], 3: []}
+   ```
+2. **Adjacency Matrix** → Efficient for dense graphs.  
+   ```python
+   graph = [[0, 1, 1, 0], [0, 0, 1, 1], [0, 0, 0, 1], [0, 0, 0, 0]]
+   ```
+
+### **Graph Traversal Algorithms**
+| Algorithm | Purpose | Complexity |
+|-----------|---------|------------|
+| BFS | Shortest path in an unweighted graph | O(V+E) |
+| DFS | Used for cycle detection & topological sorting | O(V+E) |
+| Dijkstra | Shortest path in a weighted graph | O((V+E) log V) |
+| Floyd-Warshall | All-pairs shortest path | O(V³) |
+
+### **Example: BFS**
+```python
+from collections import deque
+
+def bfs(graph, start):
+    queue = deque([start])
+    visited = set([start])
+    
+    while queue:
+        node = queue.popleft()
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                queue.append(neighbor)
+                visited.add(neighbor)
+```
+
+---
+
+## **📍 4. Trees**
+### **Key Tree Types**
+| Tree Type | Characteristics |
+|-----------|----------------|
+| Binary Tree | Each node has at most 2 children |
+| Binary Search Tree (BST) | Left < Root < Right |
+| AVL Tree | Self-balancing BST |
+| Red-Black Tree | Self-balancing BST used in databases |
+
+### **Tree Traversals**
+| Traversal | Order |
+|-----------|-------|
+| Inorder | Left → Root → Right |
+| Preorder | Root → Left → Right |
+| Postorder | Left → Right → Root |
+| Level Order | BFS traversal |
+
+```python
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val)
+        inorder(root.right)
+```
+
+---
+
+## **📍 5. Binary Search**
+Used for **sorted arrays**, **rotated sorted arrays**, **searching peaks**.
+
+```python
+def binary_search(arr, target):
+    low, high = 0, len(arr) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+```
+⏳ **Time Complexity:** **O(log N)**  
+
+---
+
+## **📍 6. Hash Tables**
+- **Average Complexity**: O(1) for insert, search, delete.  
+- **Worst Case**: O(N) (due to collisions).  
+
+```python
+hash_map = {}
+hash_map["key1"] = 100
+print(hash_map["key1"])
+```
+
+---
+
+## **📍 7. Heaps & Priority Queues**
+- **Min Heap** → Parent node is **smaller** than children.  
+- **Max Heap** → Parent node is **larger** than children.  
+
+```python
+import heapq
+
+heap = []
+heapq.heappush(heap, 5)
+heapq.heappush(heap, 1)
+heapq.heappush(heap, 10)
+
+print(heapq.heappop(heap))  # Returns 1 (min element)
+```
+
+---
+
+## **📍 8. Big-O Complexity**
+| Operation | Array | Linked List | Hash Table | BST |
+|-----------|------|-------------|-----------|-----|
+| Search | O(1) (sorted) | O(N) | O(1) | O(log N) |
+| Insert | O(N) (shift) | O(1) | O(1) | O(log N) |
+| Delete | O(N) (shift) | O(1) | O(1) | O(log N) |
+
