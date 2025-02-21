@@ -26,6 +26,9 @@
 
 # Output: true
 
+from collections import defaultdict
+from typing import List
+
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         rowMap = defaultdict(set)
