@@ -29,7 +29,7 @@ class Solution:
         memo = {len(s):True}
         def dfs(i):
             if i in memo:
-                return True
+                return memo[i]
             for w in wordDict:
                 if ((len(w)<=len(s)) and s[i:i+len(w)] == w):
                     if dfs(i+len(w)):
